@@ -81,6 +81,7 @@ void readOwnerFile()
     qDebug() << "Not Ok 2";
     return;
   }
+  ownerFlag=0;
   QTextStream in(&file);
   ownerInfoArray.clear();
   base=0;
@@ -217,6 +218,7 @@ void FoodiePalace::on_pushButton_4_clicked()
   ui->loginUserName->clear();
   ui->loginPassword->clear();
   ui->stackedWidget->setCurrentIndex(0);
+  readOwnerFile();
 }
 
 // login to next button
@@ -230,7 +232,6 @@ void FoodiePalace::on_pushButton_5_clicked()
 void FoodiePalace::on_regButton_clicked()
 {
   ui->stackedWidget->setCurrentIndex(2);
-  ownerInfoArray.clear();
   readOwnerFile();
   if (ownerFlag == 1)
   {

@@ -204,6 +204,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->graphics1->hide();
     ui->graphics2->hide();
     ui->graphics3->hide();
+    int a=0;
+    ui->orderCountLabel->setText(QString::number(a));
+    ui->orderCountLabel_2->setText(QString::number(a));
 }
 
 MainWindow::~MainWindow()
@@ -1013,6 +1016,11 @@ void MainWindow::on_confirmOrderButton_clicked()
         ui->userBlinder1->show();
         ui->userBlinder2->show();
         ui->userBlinder3->show();
+        int a=0;
+        ui->orderCountLabel->setText(QString::number(a));
+        ui->orderCountLabel_2->setText(QString::number(a));
+
+
 
 }
 
